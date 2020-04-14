@@ -1,0 +1,35 @@
+@import url('https://unpkg.com/bulma@0.8.0/css/bulma.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+@import url('./helpers.css');
+
+.brand {
+  padding: 5px;
+  border-radius: 10px;
+}
+.is-primary {
+  background-color: #2580eb !important;
+  color: #fff !important;
+}
+.search-block {
+  box-shadow: -7px 7px 15px -8px rgba(97, 94, 97, 1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.result-block {
+  flex-direction: row;
+  border: 1px solid #2580eb;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.inline {
+  display: inline;
+}
+.alignsenf {
+  align-self: center;
+}
+@media only screen and (max-width: 770px) {
+  .opname,
+  .oploc {
+    text-align: center !important;
+  }
+}
