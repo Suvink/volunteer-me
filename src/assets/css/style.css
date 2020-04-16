@@ -33,3 +33,10 @@
     text-align: center !important;
   }
 }
+.text-primary{
+  color: #2580eb !important;
+}
+.error-block{
+  color: red !important;
+  font-size: smaller;
+}
