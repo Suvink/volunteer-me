@@ -53,6 +53,7 @@
             :name="listing.name"
             :location="listing.location"
             :description="listing.description"
+            :imgurl="listing.imgurl"
             />
           </div>
         </div>
@@ -64,17 +65,17 @@
 
 <script>
 /* eslint-disable */
+import { listingsRef } from '../firebase'
 export default {
   data(){
     return {
-      listings: [ 
-          { "name": "Lorem Ipsum Dummy Event 1", "location": "Galle", "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-          { "name": "Lorem Ipsum Dummy Event 2", "location": "Colombo", "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-          { "name": "Lorem Ipsum Dummy Event 3", "location": "Kandy", "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." } 
-    ]
+      listings: []
     }
   },
-  name: 'SearchScreen'
+  name: 'SearchScreen',
+  firebase: {
+    listings: listingsRef
+  }
 }
 </script>
 

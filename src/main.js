@@ -4,7 +4,7 @@ import NavBar from './components/NavBar.vue'
 import ResultCard from './components/ResultCard.vue'
 import router from './router'
 import './firebase'
-import { firestorePlugin } from 'vuefire'
+import { rtdbPlugin } from 'vuefire'
 
 
 
@@ -12,7 +12,7 @@ import { firestorePlugin } from 'vuefire'
 Vue.component('NavBar', NavBar)
 Vue.component('ResultCard', ResultCard)
 
-Vue.use(firestorePlugin)
+Vue.use(rtdbPlugin)
 
 Vue.config.productionTip = false
 

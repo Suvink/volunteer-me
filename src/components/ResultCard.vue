@@ -4,7 +4,7 @@
             <div class="column is-3 alignsenf">
                   <center>
                     <figure class="image is-128x128">
-                      <img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/11/medical-logo-design.jpeg">
+                      <img :src='imgurl'>
                     </figure>
                   </center>
             </div>
@@ -26,7 +26,8 @@ export default {
     props: [
         "name",
         "location",
-        "description" 
+        "description",
+        "imgurl"
     ]
 }
 </script>

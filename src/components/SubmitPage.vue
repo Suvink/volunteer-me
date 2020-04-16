@@ -166,7 +166,7 @@
 
 <script>
 /* eslint-disable no-unused-vars */
-import { listings } from '../firebase'
+import { listingsRef } from '../firebase'
 /* eslint-disable no-unused-vars */
 import { ValidationProvider, ValidationObserver } from 'vee-validate';
 import { extend } from 'vee-validate';
@@ -218,7 +218,7 @@ export default {
         // if (isValid) {
         //     console.log(this.formData)
         //     alert("Ammatasiri wade hari")
-        // //     listings.push(this.formData, function(error){
+        // //     listingsRef.push(this.formData, function(error){
         // //       if(error){
         // //           alert("Something Went Wrong!")
         // //       }else{

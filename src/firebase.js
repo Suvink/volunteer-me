@@ -12,4 +12,4 @@ const app = initializeApp({
 })
 
 export const db = app.database()
-export const listings = db.ref('listings')
+export const listingsRef = db.ref('listings')
