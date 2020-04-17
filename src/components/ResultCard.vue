@@ -14,7 +14,12 @@
                     <i class="fas fa-map-marker-alt mt-0 inline oploc"></i>
                     <h1 class="title is-6 inline ml-1 oploc">{{ location }}</h1>
                 </div>
-                <p class="mt-1">{{ description }}</p>
+                <p class="mt-1" style="justify-content: center">{{ description }}</p>
+                <div class="tags">
+                    <span class="tag is-info">New</span>
+                    <span class="tag is-warning">Volunteering</span>
+                    <span class="tag is-danger">Sri Lanka</span>
+                </div>
             </div>
         </div>
     </div>

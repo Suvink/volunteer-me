@@ -40,3 +40,9 @@
   color: red !important;
   font-size: smaller;
 }
+.tags{
+  margin-top: 0.5rem
+}
+.item-des{
+  text-align: justify
+}

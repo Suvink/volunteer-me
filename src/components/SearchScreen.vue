@@ -58,7 +58,7 @@
               v-bind:key="index"
               :name="listing.name"
               :location="listing.location"
-              :description="listing.description"
+              :description="listing.shortdes"
               :imgurl="listing.imgurl"
             />
           </div>
