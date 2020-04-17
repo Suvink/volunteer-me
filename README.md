@@ -23,6 +23,10 @@ I'm using VueJS as the frontend framework and Firebase as the backend (for now).
 - Notify a host when the project is submitted. (Using Twillio)
 - Notifications for the users when a new opportunity gets listed.
 
+**[Update 2]**
+Now VolunteerME can accept submissions from anyone just by filling out the submissions form. I used Vee-Validate for form handling and It was a total nightmare. 😅 They made huge changes in Vee-Validate 3 and docs are jumbled with previous version and the latest version. Finally I learned how to use v3 and Im going to write a separate guide for that later on Dev.
+Firebase is integrated as the backend. I just love how the subscriptions work!
+
 
 ## Demo Link
  Demo Link: https://services.suvink.me/volunteer-me
@@ -39,6 +43,12 @@ Interesting Integrations
 ```
 npm install
 ```
+**Firebase config**
+<br>
+Create a fresh firebase project on Firebase console. Copy the config into  `src/firebase.js` file except project ID and API key.<br>
+Rename `sample.env.txt` in `src` directory to `src/.env` and replace the API key and Project ID. <br>
+Goto Firebase console and import `database.json` into a new Realtime DB. <br>
+
 
 ### Compiles and hot-reloads for development
 ```
@@ -57,3 +67,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+
+
+
