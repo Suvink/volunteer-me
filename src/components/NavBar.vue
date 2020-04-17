@@ -13,13 +13,19 @@
         </div>
         <div class="navbar-end">
             <div class="navbar-item">
-                <router-link to="/search">
                     <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Search</strong>
-                        </a>
+                        <router-link to="/search">
+                            <a class="button is-primary">
+                                <strong>Search</strong>
+                            </a>
+                        </router-link>
+                        <router-link to="/add">
+                            <a class="button is-primary ml-2">
+                                <strong>Add Events</strong>
+                            </a>
+                        </router-link>
                     </div>
-                </router-link>
+                
             </div>
         </div>
     </nav>

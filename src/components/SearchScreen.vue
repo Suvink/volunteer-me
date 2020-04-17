@@ -1,13 +1,9 @@
-
 <template>
   <div class="root">
     <div class="container has-text-centered">
       <div class="columns">
-
         <!-- Filters -->
-        <div class="column is-2">
-
-        </div>
+        <div class="column is-2"></div>
 
         <!-- Main -->
         <div class="column is-8">
@@ -21,8 +17,7 @@
               <div class="control is-expanded">
                 <div class="select is-fullwidth">
                   <select name="country">
-                    <option>Select a district</option>
-                    <option value="Kalutara ">Kalutara</option>
+                    <option value="">Select a district</option>
                     <option value="Ampara">Ampara</option>
                     <option value="Anuradhapura">Anuradhapura</option>
                     <option value="Badulla">Badulla</option>
@@ -32,12 +27,22 @@
                     <option value="Gampaha">Gampaha</option>
                     <option value="Hambantota">Hambantota</option>
                     <option value="Jaffna">Jaffna</option>
+                    <option value="Kalutara">Kalutara</option>
                     <option value="Kandy">Kandy</option>
                     <option value="Kegalle">Kegalle</option>
                     <option value="Kilinochchi">Kilinochchi</option>
                     <option value="Kurunegala">Kurunegala</option>
                     <option value="Mannar">Mannar</option>
                     <option value="Matale">Matale</option>
+                    <option value="Matara">Matara</option>
+                    <option value="Monaragala">Monaragala</option>
+                    <option value="Mullativu">Mullativu</option>
+                    <option value="Nuwara Eliya">Nuwara Eliya</option>
+                    <option value="Polonnaruwa">Polonnaruwa</option>
+                    <option value="Puttalam">Puttalam</option>
+                    <option value="Rathnapura">Rathnapura</option>
+                    <option value="Trincomalee">Trincomalee</option>
+                    <option value="Vavuniya">Vavuniya</option>
                   </select>
                 </div>
               </div>
@@ -48,12 +53,13 @@
           </div>
 
           <div class="results mt-2">
-            <ResultCard v-for='(listing, index) in listings'
-            v-bind:key="index"
-            :name="listing.name"
-            :location="listing.location"
-            :description="listing.description"
-            :imgurl="listing.imgurl"
+            <ResultCard
+              v-for="(listing, index) in listings"
+              v-bind:key="index"
+              :name="listing.name"
+              :location="listing.location"
+              :description="listing.description"
+              :imgurl="listing.imgurl"
             />
           </div>
         </div>
@@ -67,7 +73,7 @@
 /* eslint-disable */
 import { listingsRef } from '../firebase'
 export default {
-  data(){
+  data () {
     return {
       listings: []
     }
@@ -82,5 +88,4 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import url('../assets/css/style.css');
-
 </style>
