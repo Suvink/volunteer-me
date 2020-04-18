@@ -209,6 +209,7 @@
                   v-model="tag"
                   :tags="tags"
                   @tags-changed="newTags => tags = newTags"
+                  :autocomplete-items="filteredItems"
                 />
               </div>
               <div class="field">
@@ -284,6 +285,17 @@ export default {
       terms: '',
       notify: false,
       notifySuccess: false,
+      autocompleteItems: [{
+        text: 'SriLanka',
+      }, {
+        text: 'Volunteering',
+      }, {
+        text: 'Github',
+      }, {
+        text: 'Agriculture',
+      }, {
+        text: 'Animals',
+      }],
       formData: {
         name: '',
         location: '',
@@ -339,6 +351,13 @@ export default {
     },
     hideNotification: function (){
       this.notify = false
+    }
+  },
+  computed: {
+    filteredItems() {
+      return this.autocompleteItems.filter(i => {
+        return i.text.toLowerCase().indexOf(this.tag.toLowerCase()) !== -1
+      })
     }
   }
 }
