@@ -8,48 +8,57 @@
         <!-- Main -->
         <div class="column is-8">
           <div class="search-block mt-2">
-            <div class="field has-addons">
-              <p class="control">
-                <a class="button is-static">
-                  I want to Volunteer in
-                </a>
-              </p>
-              <div class="control is-expanded">
-                <div class="select is-fullwidth">
-                  <select name="country">
-                    <option value="">Select a district</option>
-                    <option value="Ampara">Ampara</option>
-                    <option value="Anuradhapura">Anuradhapura</option>
-                    <option value="Badulla">Badulla</option>
-                    <option value="Batticaloa">Batticaloa</option>
-                    <option value="Colombo">Colombo</option>
-                    <option value="Galle">Galle</option>
-                    <option value="Gampaha">Gampaha</option>
-                    <option value="Hambantota">Hambantota</option>
-                    <option value="Jaffna">Jaffna</option>
-                    <option value="Kalutara">Kalutara</option>
-                    <option value="Kandy">Kandy</option>
-                    <option value="Kegalle">Kegalle</option>
-                    <option value="Kilinochchi">Kilinochchi</option>
-                    <option value="Kurunegala">Kurunegala</option>
-                    <option value="Mannar">Mannar</option>
-                    <option value="Matale">Matale</option>
-                    <option value="Matara">Matara</option>
-                    <option value="Monaragala">Monaragala</option>
-                    <option value="Mullativu">Mullativu</option>
-                    <option value="Nuwara Eliya">Nuwara Eliya</option>
-                    <option value="Polonnaruwa">Polonnaruwa</option>
-                    <option value="Puttalam">Puttalam</option>
-                    <option value="Rathnapura">Rathnapura</option>
-                    <option value="Trincomalee">Trincomalee</option>
-                    <option value="Vavuniya">Vavuniya</option>
-                  </select>
+
+            <ValidationObserver v-slot="{ handleSubmit }">
+              <form @submit.prevent="handleSubmit(search)">
+                <div class="field has-addons">
+                  <p class="control">
+                    <a class="button is-static">
+                      I want to Volunteer in
+                    </a>
+                  </p>
+                  <div class="control is-expanded">
+                    <div class="select is-fullwidth">
+                      <ValidationProvider rules="required" v-slot="{ errors }">
+                        <select name="country" v-model="searchData.keyword">
+                          <option value="">Select a district</option>
+                          <option value="Ampara">Ampara</option>
+                          <option value="Anuradhapura">Anuradhapura</option>
+                          <option value="Badulla">Badulla</option>
+                          <option value="Batticaloa">Batticaloa</option>
+                          <option value="Colombo">Colombo</option>
+                          <option value="Galle">Galle</option>
+                          <option value="Gampaha">Gampaha</option>
+                          <option value="Hambantota">Hambantota</option>
+                          <option value="Jaffna">Jaffna</option>
+                          <option value="Kalutara">Kalutara</option>
+                          <option value="Kandy">Kandy</option>
+                          <option value="Kegalle">Kegalle</option>
+                          <option value="Kilinochchi">Kilinochchi</option>
+                          <option value="Kurunegala">Kurunegala</option>
+                          <option value="Mannar">Mannar</option>
+                          <option value="Matale">Matale</option>
+                          <option value="Matara">Matara</option>
+                          <option value="Monaragala">Monaragala</option>
+                          <option value="Mullativu">Mullativu</option>
+                          <option value="Nuwara Eliya">Nuwara Eliya</option>
+                          <option value="Polonnaruwa">Polonnaruwa</option>
+                          <option value="Puttalam">Puttalam</option>
+                          <option value="Rathnapura">Rathnapura</option>
+                          <option value="Trincomalee">Trincomalee</option>
+                          <option value="Vavuniya">Vavuniya</option>
+                        </select>
+                        <h1 class="error-block mb-1">{{ errors[0] }}</h1>
+                    </ValidationProvider>
+                    </div>
+                  </div>
+                  <div class="control">
+                    <button type="submit" class="button is-primary">Choose</button>
+                  </div>
                 </div>
-              </div>
-              <div class="control">
-                <button type="submit" class="button is-primary">Choose</button>
-              </div>
-            </div>
+              </form>
+            </ValidationObserver>
+
           </div>
 
           <div class="results mt-2">
@@ -72,15 +81,40 @@
 <script>
 /* eslint-disable */
 import { listingsRef } from '../firebase'
+/* eslint-disable no-unused-vars */
+import { ValidationProvider, ValidationObserver } from 'vee-validate'
+import { extend } from 'vee-validate'
+
+import { required } from 'vee-validate/dist/rules'
+extend('required', {
+  ...required,
+  message: 'Please select a district to search!'
+})
+
 export default {
   data () {
     return {
-      listings: []
+      listings: [],
+      searchData: {
+        keyword: ""
+      }
     }
   },
   name: 'SearchScreen',
+  components: {
+    ValidationProvider,
+    ValidationObserver
+  },
   firebase: {
     listings: listingsRef
+  },
+  methods: {
+    search () {
+      console.log(this.searchData.keyword)
+      listings: listingsRef.orderByChild('location').equalTo(this.searchData.keyword)
+      this.$set(this.listings,listingsRef.orderByChild('location').equalTo(this.searchData.keyword))
+      console.log(listingsRef.orderByChild('location').equalTo(this.searchData.keyword))
+    }
   }
 }
 </script>

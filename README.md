@@ -17,23 +17,27 @@ But finding a project to volunteer is not so easy. Mainly because different host
 
 ## How I built it
 
-**[Initial Update]**
+**[Initial Update]**<br>
 I'm using VueJS as the frontend framework and Firebase as the backend (for now). The initial Stage is published and it just lists down the opportunities. It's still under constructions and I'm willing to add the following features soon.
-- A way to submit opportunities
-- Notify a host when the project is submitted. (Using Twillio)
-- Notifications for the users when a new opportunity gets listed.
+- A way to submit opportunities ✅
+- Notify a host when the project is submitted. (Using Twillio) ✅
+- Notifications for the users when a new opportunity gets listed. ⚒️
 
-**[Update 2]**
+**[Update 2]**<br>
 Now VolunteerME can accept submissions from anyone just by filling out the submissions form. I used Vee-Validate for form handling and It was a total nightmare. 😅 They made huge changes in Vee-Validate 3 and docs are jumbled with previous version and the latest version. Finally I learned how to use v3 and Im going to write a separate guide for that later on Dev.
 Firebase is integrated as the backend. I just love how the subscriptions work!
 
+**[Update 3]**<br>
+VolunteerME now sends whatsapp messages using Twilio's APIs when you submit an event to the system. But Sadly I haven't submitted my template to Whatsapp and got the approval. Untill then, this feature wont work. I used a Firebase Cloud funcion to send whatsapp message. Although it needed my project to be upgraded to Blaze plan, it was the easiest way to do this (for me!). You can find the source code for the cloud function <a href="https://github.com/Suvink/volunteerme-functions">here.</a> Now I have to work on the UI of the project. I'm really bad at content writing but gonna give this a try and see how it turns up. Cheers!
 
 ## Demo Link
  Demo Link: https://services.suvink.me/volunteer-me
 
 
 ## Link to Code
-Github: https://github.com/Suvink/volunteer-me
+<u>Github</u> <br>
+Frontend: https://github.com/Suvink/volunteer-me <br>
+Cloud Function to send Whatsapp message: https://github.com/Suvink/volunteerme-functions
 
 ## Submission Category
 Interesting Integrations

@@ -2,7 +2,11 @@
   <div class="root">
     <div class="container has-text-centered">
       <h1 class="title is-1 mb-0">Submit an oppotunity</h1>
-
+      <div id="notification-class" class="notification mt-1 ml-2 mr-2" v-bind:class="{'is-success': notifySuccess, 'is-danger': !notifySuccess}" v-if="notify">
+        <button class="delete" @click="hideNotification()"></button>
+        <p v-if="notifySuccess">Your event submitted successfully!</p>
+        <p v-if="!notifySuccess">Something went wrong!</p>
+      </div>
       <div class="columns mt-2">
         <div class="column is-6">
           <h1 class="title is-6 mb-0 text-primary">Contribute to the world!</h1>
@@ -60,7 +64,8 @@
                 </div>
               </div>
               <div class="field">
-                <label class="label">Host Contact Number</label>
+                <label class="label mb-0">Host Contact Number</label>
+                <span class="mt-0 error-block text-black">With the country code (Eg: 9477711188) </span>
                 <div class="control">
                   <ValidationProvider
                     rules="required|numeric"
@@ -69,7 +74,7 @@
                     <input
                       class="input"
                       type="text"
-                      placeholder="Host's contact number"
+                      placeholder="With the country code (Eg: 9477711188)"
                       v-model="formData.contactno"
                       required
                     />
@@ -162,7 +167,7 @@
               <div class="field">
                 <label class="label">Detailed Description</label>
                 <div class="control">
-                  <ValidationProvider rules="required" v-slot="{ errors }">
+                  <ValidationProvider rules="required|min:250" v-slot="{ errors }">
                     <textarea
                       class="textarea"
                       placeholder="The detailed full description about the project"
@@ -232,11 +237,12 @@
 <script>
 /* eslint-disable no-unused-vars */
 import { listingsRef } from '../firebase'
+import axios from 'axios'
 /* eslint-disable no-unused-vars */
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import { extend } from 'vee-validate'
 
-import { required, email, numeric } from 'vee-validate/dist/rules'
+import { required, email, numeric, min } from 'vee-validate/dist/rules'
 extend('email', {
   ...email,
   message: 'Please enter a valid email address!'
@@ -249,6 +255,10 @@ extend('numeric', {
   ...numeric,
   message: 'Must be a number!'
 })
+extend('min',{
+  ...min,
+  message: "Minimun 250 characters required!"
+})
 
 export default {
   name: 'SearchPage',
@@ -259,6 +269,8 @@ export default {
   data () {
     return {
       terms: '',
+      notify: false,
+      notifySuccess: false,
       formData: {
         name: '',
         location: '',
@@ -275,22 +287,37 @@ export default {
     }
   },
   methods: {
-    submitData () {
+    submitData: function () {
       if (!this.formData.imgurl) {
         this.formData.imgurl =
           'https://wizardly-visvesvaraya-500b32.netlify.app/favicon.png'
       }
       console.log(this.formData)
-
+      
       //Push into Firebase
       listingsRef.push(this.formData, function (error) {
         if (error) {
           alert('Something went wrong!')
-        } else {
-          alert('Form submitted successfully!')
+        }else{
+          console.log("Firebase Successful")
         }
       })
-      alert('Form Submitted!')
+      //Send Whatsapp Message
+      axios.post("https://us-central1-volunteer-me-9b8b3.cloudfunctions.net/sendWhatsapp", {
+          to: "whatsapp:"+this.formData.contactno,
+          message: "Your listing "+this.formData.name+" has been added uccessfully!\nThank you fir using VolunteerME!"
+      }).then(callback => {
+          console.log("Successfully sent whatsapp message")
+          this.notify = true
+          this.notifySuccess = true
+      }).catch(error =>{
+          console.log(error)
+          this.notify = true
+          this.notifySuccess = false
+      })
+    },
+    hideNotification: function (){
+      this.notify = false
     }
   }
 }
