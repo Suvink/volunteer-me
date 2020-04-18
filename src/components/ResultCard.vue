@@ -16,9 +16,9 @@
                 </div>
                 <p class="mt-1 item-des">{{ description }}</p>
                 <div class="tags">
-                    <span class="tag is-info">New</span>
-                    <span class="tag is-warning">Volunteering</span>
-                    <span class="tag is-danger">Sri Lanka</span>
+                    <span class="tag is-info">{{ tags.t1 }}</span>
+                    <span class="tag is-warning">{{ tags.t2 }}</span>
+                    <span class="tag is-danger">{{ tags.t3 }}</span>
                 </div>
             </div>
         </div>
@@ -32,7 +32,8 @@ export default {
         "name",
         "location",
         "description",
-        "imgurl"
+        "imgurl",
+        "tags"
     ]
 }
 </script>

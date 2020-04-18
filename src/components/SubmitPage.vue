@@ -203,6 +203,15 @@
                 </div>
               </div>
               <div class="field">
+                <label class="label mb-0">Tags</label>
+                <span class="mt-0 error-block text-black">Max 3 tags. Hit enter to confirm a tag</span>
+                <vue-tags-input
+                  v-model="tag"
+                  :tags="tags"
+                  @tags-changed="newTags => tags = newTags"
+                />
+              </div>
+              <div class="field">
                 <div class="control">
                   <label class="checkbox">
                     <ValidationProvider rules="required" v-slot="{ errors }">
@@ -235,6 +244,7 @@
 </template>
 
 <script>
+import VueTagsInput from '@johmun/vue-tags-input';
 /* eslint-disable no-unused-vars */
 import { listingsRef } from '../firebase'
 import axios from 'axios'
@@ -264,10 +274,13 @@ export default {
   name: 'SearchPage',
   components: {
     ValidationProvider,
-    ValidationObserver
+    ValidationObserver,
+    VueTagsInput,
   },
   data () {
     return {
+      tag: '',
+      tags: [],
       terms: '',
       notify: false,
       notifySuccess: false,
@@ -282,7 +295,12 @@ export default {
         role: '',
         email: '',
         contactno: '',
-        imgurl: ''
+        imgurl: '',
+        ctags: {
+          t1: '',
+          t2: '',
+          t3: ''
+        }
       }
     }
   },
@@ -292,8 +310,11 @@ export default {
         this.formData.imgurl =
           'https://wizardly-visvesvaraya-500b32.netlify.app/favicon.png'
       }
-      console.log(this.formData)
       
+      this.formData.ctags.t1 = this.tags[0].text
+      this.formData.ctags.t2 = this.tags[1].text
+      this.formData.ctags.t3 = this.tags[2].text
+
       //Push into Firebase
       listingsRef.push(this.formData, function (error) {
         if (error) {

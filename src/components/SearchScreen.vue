@@ -69,6 +69,7 @@
               :location="listing.location"
               :description="listing.shortdes"
               :imgurl="listing.imgurl"
+              :tags="listing.ctags"
             />
           </div>
         </div>
