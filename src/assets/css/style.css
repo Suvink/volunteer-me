@@ -82,6 +82,9 @@ footer{
   height: 100px;
   border-radius: 10px;
 }
+.level-email{
+  background-color: #64c37d !important;
+}
 .btn-dev{
   background-image: linear-gradient(to bottom right, #f18e8e, #fce08a, #f3f095,#55c1ae, #88aedc,#f4b3ce,#f18e8e, #fce08a, #f3f095, #55c1ae,#88aedc, #f4b3ce);
   color: #000000 !important

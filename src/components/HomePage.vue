@@ -73,6 +73,16 @@
             </div>
             <div class="level-item has-text-centered">
               <div>
+                <img class="level-gh" src="https://image.flaticon.com/icons/svg/1108/1108905.svg" style="height: 100px">
+                <center>
+                  <a href="mailto:hello@suvink.me">
+                    <button class="button is-info level-email mt-1"><i class="fas fa-envelope home-icon"></i> Email Us</button>
+                  </a>
+                </center>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
                 <img class="level-dev" src="https://res.cloudinary.com/practicaldev/image/fetch/c_scale,fl_progressive,q_auto,w_190/f_auto/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/rainbowdev.svg" style="height: 100px">
                 <center>
                   <a href="https://dev.to/suvink/volunteerme-all-volunteering-in-one-place-2c06" target="__blank">
