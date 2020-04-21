@@ -112,7 +112,7 @@
               <div class="field">
                 <label class="label">Start Date</label>
                 <div class="control">
-                  <ValidationProvider rules="required" v-slot="{ errors }">
+                  <ValidationProvider :rules="{ regex: /^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$/ }" v-slot="{ errors }">
                     <input
                       class="input"
                       type="text"
