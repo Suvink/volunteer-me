@@ -111,10 +111,13 @@ export default {
   },
   methods: {
     search () {
+      console.log(this.listings)
       console.log(this.searchData.keyword)
-      listings: listingsRef.orderByChild('location').equalTo(this.searchData.keyword)
-      this.$set(this.listings,listingsRef.orderByChild('location').equalTo(this.searchData.keyword))
-      console.log(listingsRef.orderByChild('location').equalTo(this.searchData.keyword))
+      listingsRef.orderByChild('location').equalTo(this.searchData.keyword).on('value',  (snapshot)=>{
+        //console.log(snapshot.val())
+        this.listings= snapshot.val()
+      })
+      console.log(this.listings)
     }
   }
 }

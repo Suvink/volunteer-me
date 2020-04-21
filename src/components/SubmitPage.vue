@@ -338,16 +338,23 @@ export default {
       //Send Whatsapp Message
       axios.post("https://us-central1-volunteer-me-9b8b3.cloudfunctions.net/sendWhatsapp", {
           to: "whatsapp:"+this.formData.contactno,
-          message: "Your listing "+this.formData.name+" has been added uccessfully!\nThank you fir using VolunteerME!"
+          message: "Your listing "+this.formData.name+" has been added successfully!\nThank you for using VolunteerME!"
       }).then(callback => {
           console.log("Successfully sent whatsapp message")
           this.notify = true
           this.notifySuccess = true
+          this.formData = {name: '',location: '',shortdes: '',fulldes: '',orgname: '',startdate: '',selection: '',role: '',email: '',contactno: '',imgurl: '',ctags: {t1: '',t2: '',t3: ''}}
+          this.errors.clear();
+          requestAnimationFrame(() => {
+            this.$refs.observer.reset();
+            
+          });
       }).catch(error =>{
           console.log(error)
           this.notify = true
           this.notifySuccess = false
       })
+      
     },
     hideNotification: function (){
       this.notify = false

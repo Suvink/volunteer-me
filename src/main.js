@@ -5,11 +5,13 @@ import ResultCard from './components/ResultCard.vue'
 import router from './router'
 import './firebase'
 import { rtdbPlugin } from 'vuefire'
+import Footer from './components/Footer.vue'
 
 
 
 //Register Components
 Vue.component('NavBar', NavBar)
+Vue.component('Footer', Footer)
 Vue.component('ResultCard', ResultCard)
 
 Vue.use(rtdbPlugin)

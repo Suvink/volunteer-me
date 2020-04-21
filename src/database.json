@@ -1,40 +1,94 @@
 {
-    "listings" : [ {
-      "contactno" : "+94123345456",
+  "listings" : {
+    "-M55d02SNAgwAc2rUES6" : {
+      "contactno" : "0771655198",
+      "ctags" : {
+        "t1" : "prototyping",
+        "t2" : "ocean",
+        "t3" : "preservation"
+      },
+      "email" : "info@chap.com",
+      "fulldes" : "Este proyecto se centra en el trabajo con niños en condiciones especiales (síndrome de Down, niñas afectadas por la violencia doméstica, síndrome de Asperger, Cáncer entre otros) y fomenta su aprendizaje a través de las artes. Encontraría actividades artísticas como teatro, tocar música, cantar, bailar y hacer manualidades. El impacto no se hará solo en la comunidad, también ocurrirá en usted. ¡Ven a Cali, Colombia y sé parte de este hermoso proyecto!\nMain activities\nDesarrolle espacios creativos, amigables y divertidos para los niños.\n\nBrindar acompañamiento a los alumnos en diferentes actividades (arte, música, teatro, danza).\n\nComparta su propia habilidad al explorar temas relacionados con ella.\n\nGenerar una planificación de las actividades a realizar que fortalezcan el vínculo intercultural.\n\nServir logística en eventos de muestra ofrecidos por los estudiantes.\n\nParticipe en los eventos interculturales de AIESEC. Asista a las sesiones principales de AIESEC",
+      "imgurl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaU6qgwDxR20i0_8Paptg9HCL_6jONdsqCNnEqxnTjz92AgH2T&usqp=CAU",
+      "location" : "Batticaloa",
+      "name" : "PROYECTARTE - Powerful Actions - Cali, Colombia",
+      "orgname" : "CHAP",
+      "role" : "Es obligatorio que todos los aprendices de AIESEC en Colombia vengan con un seguro internacional durante todo el tiempo de su pasantía. AIESEC en Colombia le sugiere que lo compre con nuestro socio nacional TRAVEL KID.",
+      "selection" : "None",
+      "shortdes" : "By 2030, empower and promote the social, economic and political inclusion of all, irrespective of age, sex, disability, race, ethnicity, origin, religion or economic or other status",
+      "startdate" : "21/12/2020"
+    },
+    "-M5DMatxR9lP4E2qlChh" : {
+      "contactno" : "9477711178",
+      "ctags" : {
+        "t1" : "environment",
+        "t2" : "volunteering ",
+        "t3" : "agriculture"
+      },
+      "email" : "info@aiesec.net",
+      "fulldes" : "Let's green the world with your lovely \"fingers\" and spread your environment-friendly spirits to society! Green With Fingers provides you a space to deep into organic agricultural knowledge, broaden your horizon on Vietnamese ecology through practical experiences and deliver inspirational lessons to the young on environmental affection and conservation. Happy Vegi's fresh gardens are identical places to feel the \"natural beat of nature\" through the non-chemical process and biological treatment.",
+      "imgurl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbUPgmNOjPHgaZGEjl4Bw-o7wadYl5VBLgxdRHH0ya9UQnRCuD&usqp=CAU",
+      "location" : "Kandy",
+      "name" : " GREEN WITH FINGERS ~ Dating with nature",
+      "orgname" : "AIESEC",
+      "role" : "Will be announced later",
+      "selection" : "Nothing",
+      "shortdes" : "By 2020, achieve the environmentally sound management of chemicals and all wastes throughout their life cycle, in accordance with agreed international frameworks, and significantly reduce their release to air, water and soil in order to minimize their adverse impacts on human health and the environment",
+      "startdate" : "12/05/2020"
+    },
+    "-M5NFPWx_AaJryPzWyjU" : {
+      "contactno" : "94123345456",
+      "ctags" : {
+        "t1" : "SriLanka",
+        "t2" : "Volunteering",
+        "t3" : "AIESEC"
+      },
       "email" : "contact@aiesec.net",
       "fulldes" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
       "imgurl" : "https://image.freepik.com/free-vector/charity-life-abstract-logo_1043-47.jpg",
       "location" : "Colombo",
       "name" : "Feel Education - Good Morning India (Art)",
       "orgname" : "AIESEC",
-      "role" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
-      "selection" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
+      "role" : "Volunteer ",
+      "selection" : "None",
       "shortdes" : "By 2030, ensure that all girls and boys complete free, equitable and quality primary and secondary education leading to relevant and effective learning outcomes",
       "startdate" : "21/04/2020"
-    }, {
-      "contactno" : "+94123345456",
+    },
+    "-M5NFozzRVxaB-Hk7Cgm" : {
+      "contactno" : "94123345456",
+      "ctags" : {
+        "t1" : "SriLanka",
+        "t2" : "Galle",
+        "t3" : "Animals"
+      },
       "email" : "contact@aiesec.net",
       "fulldes" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
       "imgurl" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUBAAL///8AAAD09PTb29vx8fEdHR7Pz892dnempqaRkZHr6+ve3t5KSUoMDA09PT6YmJlpaWm4uLiTkpOJiYkuLS7W1dZUVFUyMjKtra2goKA5ODkTExQfHyD5+fnExMRSUlJiYmLAwMAnJydmZmaBgYJFREVzc3MXFxgiABA3AAAJ30lEQVR4nO2da5uyKhSGdZmVaTY2mmWlnWbq///CLSYIiGXvJIab51vGpdwKrMXiZJjPlbqZE8aLaOyD8QkCfxwt4tDJ3LRF7o1ndF4S+IDVN1spkh8/SLxnlI8JR+H6k8h4FXlbh6N/JtxsP5gOC2Vxu/kXwjRRAO8ulNGksbA2ESY7RfDuAtglLxFOIqX4kACiSWtCK1ClfNLK8xxY7QgnahXQSnlRFXzGOuGXonxIAF/PCWOFARFi/ITQWisNiBDX1iNC96w2HxJEbjOhu1cfMEfcu02E1gC+IBJEVgPhehiAOeJaTBgPBTBHjEWEKttBXrRdJISTAQEixAlPaO2GBJgj7iyOMBgWYI4YsITDKqNIpJyWhNHQAJFVpAmTwX1C9BGTijAdWDNzF+xSQpgMETBHTAjhAMsoEgAm3MgClB06h01JuJX0SIAstSzLPAD+3fFwAWzvhCNZLxWbqIKwANudo8UiunUFCTAqCEN5hRQTIsWzbGUXv9PRabroBBJCRJhK6xZiwjnAT2abrNzNlS+wf0eGdZoTetJqPiacnUyxRskvsPrzE72cUJ4xpLo0jUqzcL4v4PbxMvv7R0xyQnm9ijaESJY3Wo3cvPfj/Z0wMI1U3tB1W0KiNxD6qeFKNMA9EIJr/L2sv/A46YQGZIYzcELHkGbveyIMDYlR0l4IY2MxcMKFITFC0wthZIwHTjg2JM5V64XQNyQGMPoglMnXE6FUaUJN+PnShJrw8/U/JUwfzERXntCehEVw+Bx8r/jw6QAI3c3lvsqhjO8fk/qUe5UJsyMf3kYR0svSHQbh8iiMZxcXx2FmlTXTmkiMsLxHmHDRHK4vo93XaXCIFJxsXo3MPEn2WWuQXlBLQoWlCdWXJlRfmlB9aUL1pQnVlyZUX5pQfWlC9aUJ1ZcmVF//B8LV4AmvYa7ZQJaMi6RuqHf4gq7UNxgW7PbjLrT/mGWREKZ2F0pnH0P4XRu9fY++NKEsaUJNqAn7lybUhJqwf2lCRQgfdXJmHRF+y+xZAVymTbouOyJcXhufeXk7IlrZ/kl6/y4CxRYTH6T3b+ahCWVLE2pCTdi/NKEm1IT9SxNqQk3YvzShJtSE/yJvmYTTY/Dz5WTPjtmyTxtnFlxnzqZx8Xe3hGEZ7Qq4p7rldcG5RJOpT8fJollz1GcUnumkgSNcBN0t4Qw/PRMTOnx2sl82+ocSHcWM3oWNFKIf34IjgLomLK+da4TFZY7QPgqim/mlUAD4I0zq108dk0NocKFgMeGqIXoLcOGznR6ESfMbTPsiBGZ1uZBw+WBVM1eR7cad1QBirnWSRGiwZw+JCDOoXgcfkOdr7KG6bz3psSdCoAP6AkISmka5jZ3N6bT58al8083NlEp7nqGk32eorrFnVckiNOBGtXMCwgXJ4LlqLU7kSCK6nC4rmAsB94LqKmMbpREa8POI0CnzAXQy07SOJNtVRT6Ta8w2wyeCyLTcEgmpglYjTPcYkD8ODU8TrtIm5GVwztOI/JEJrnZPaMCimXCDM8d7P0XSoiXZ4s9KXkZto2hcfGHeE2EFVCP8LbM2rjuiyLT7v0GCK1fW+DJM84LhV70QGuBjx5EnxFsUixzV0XQzoo3pFFMInDlSTr/q1zolJE0Adjh4QgenY3edEarcZBQOoj9xWTjKJYR9jAkmYsKyxawfSViX9eBzo/H88kGVaZJCeBuVO4PidpwnxH+LXGxOE0FVq5TVm1kphH6asBWEJ8T/cp0skcpDRMAQFmhSoat2Vg6hjc/+KGsaR+hxhfiRys39IRJ2/21cGiq/SBYhaeWOAsKVoOSlE173j1bODSLmkRU+mJGqpbIIc7NW/nuqE5LaQxkArzbx5z6fKhQYdeq9lO4tNflKGiE+kA5uDwgpN6w2Daaswj8PCbEDT/W4pRFWLlVYIxS1j02EuJRWLiAtUkorky+P0IyrstiipWkixM7BWtzS4JJS9VokEpKW/MATpvgfqpfcRIitxU0YOnTrd5JIWPlwS7vBHlJ9Q4+PT5SEp4au010TnLiyrDIJcdcVdh5HiAsw5bXZYakZW7XIV6rFWpFwLYXqC0slJB2fI0eIzbjQ8z6wjcetufNUvSqqHZJKaF4xCfcdiD8gcqfnLOH1wdvAlZeOmsoltHEODJYQn5UF4+eE+KgUkZtO3AqqyZJLyB2+V9UlPE+bjUPdxZVSUhHrbc0K/7WjGlrJhOzpe7Wwhij4Qpx2bMR/8NuIuHEYKxJ9XtmEzPOo9hBvscpGjnN5Cz4yQSobbBmbaG/JPejrsgnRkKKIMCVmD6bUpxldeHtokrYGNVjU66iGPdiiLp3Q2gsJqXguOi/PtU3LHX0dqNEoytWsIuEwdzw7TW3PmVeArMsqnZAeYmKsdvVxkR9z3kYGMwJKx4o9Jultvb4xQzOsGZFPSJ09z/olVwq9thSEHWBbMujcm+BCIT0QVue3cZ5X2JiX2oB449nZdRvSA2G1SIn3LZe+MDdonJt3YLyzKGnevNY8nT4IiVGsec/2D79OqSiCM0FPCYXv+JkK+Zeu9xrlzDbhcjjB/aK6G2qHYy48M980Tar55pKehUHibglXy7v4PGbldeE8klUSzM+7PF+3RRxmD+P83uY43+4B9tv5cdMw8eYT50TlsmzXdYW9+JrSPKn9YO7UhxK+UZpQE2rC/qUJNaEm7F+aUBNqwv71AmHLhMoSQtvzgFUlBL/tmc7KEo7bnsutLGHU9mx1ZQkXRtwV4Wi9aK21MNr0FsLYaHkC3+uEq9r0pwdqMX3xHwlDw+mQsNWdi7u/vNNUa0LHyAZOmBluu6SKEgK4RtrO5KtK6KeGGQyaMDANPK9noIRJTthu5zM1CdGMSYPM6xkk4TrNCc1WNl9RwtyTMFom/jTCVnWryHROyM5oakw8Sa1XlDYOyovuHr52cytt9f6Kqf+IcNOumL6s1oBd3b1Yn4EIzZcyo44ATEzYziQqp/uEgoIw/ZiDJN4p2KWEkCzCHZLwnJA7odkyWqOSIDJpwleadjVEFrKUhC17GAqJzAnEhNbAGhvYWRzhwMoptdiKEJpfA0KkJ+ZWhHjp9RBEr2unCFt54EqIWWxLE1oDsYrskg2a0HT3Q0CEMzO3kyE03QF8RYjYyassoWmtFW9RAbbcqiKOEK0qUBmxtmOWgFBpu1jfzEhEaE52ijIC7AQbVAgITSt4LcjyGcrzHAg2WBQS5p8xUg4RIBLvMCImzHv9ahXVvIA2DZQ3EZarV/rOeSuhjCaNKxcaCXNttgpAoixu67t/tiNE+8GuX43tylSRt3X4eLzhMWFeWL0k8F+JM8sQyY8fJN6zTYmfERaUbuaE8SIat5wD17XAH0eLOHQy9xkd0n+I4aZUg+hPGAAAAABJRU5ErkJggg==",
       "location" : "Galle",
       "name" : "Feel Education | SDG Caravan",
       "orgname" : "AIESEC",
-      "role" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
-      "selection" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
+      "role" : "Volunteer ",
+      "selection" : "None",
       "shortdes" : "By 2030, ensure that all girls and boys complete free, equitable and quality primary and secondary education leading to relevant and effective learning outcomes",
       "startdate" : "21/04/2020"
-    }, {
-      "contactno" : "+94123345456",
+    },
+    "-M5NGVmD7sony6eH77Uo" : {
+      "contactno" : "94123345456",
+      "ctags" : {
+        "t1" : "Agriculture",
+        "t2" : "Volunteering",
+        "t3" : "welfare"
+      },
       "email" : "contact@aiesec.net",
       "fulldes" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
-      "imgurl" : "https://www.eastcorkjournal.ie/wp-content/uploads/2017/09/dog-trust-copy.jpg",
+      "imgurl" : "https://www.eastcorkjournal.ie/wp-content/uploads/2017/09/dog-trust-copy.jpg\"",
       "location" : "Kandy",
       "name" : "The Andes Way (MKT) - Sotrali",
       "orgname" : "AIESEC",
-      "role" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
-      "selection" : "Despite the considerable progress on education access and participation over the past years, 262 million children and youth aged 6 to 17 were still out of school in 2017, and more than half of children and adolescents are not meeting minimum proficiency standards in reading and mathematics. Good Morning Bangalore aims to educate children and adults alike on various subjects, mainly English and Mathematics, using various unconventional methods from sessions and to consistent weekly evaluation",
+      "role" : "Volunteer has to work on an animal welfare project",
+      "selection" : "None",
       "shortdes" : "By 2030, ensure that all girls and boys complete free, equitable and quality primary and secondary education leading to relevant and effective learning outcomes",
       "startdate" : "21/04/2020"
-    } ]
+    }
   }
-  
+}

@@ -3,7 +3,7 @@
         <div class="columns">
             <div class="column is-3 alignsenf">
                   <center>
-                    <figure class="image is-128x128">
+                    <figure class="image is-128x128 bannerimg">
                       <img :src='imgurl'>
                     </figure>
                   </center>
@@ -16,9 +16,9 @@
                 </div>
                 <p class="mt-1 item-des">{{ description }}</p>
                 <div class="tags">
-                    <span class="tag is-info">{{ tags.t1 }}</span>
-                    <span class="tag is-warning">{{ tags.t2 }}</span>
-                    <span class="tag is-danger">{{ tags.t3 }}</span>
+                    <span class="tag is-info">#{{ tags.t1 }}</span>
+                    <span class="tag is-warning">#{{ tags.t2 }}</span>
+                    <span class="tag is-danger">#{{ tags.t3 }}</span>
                 </div>
             </div>
         </div>

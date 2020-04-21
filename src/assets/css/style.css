@@ -2,6 +2,9 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 @import url('./helpers.css');
 
+strong{
+  color: #2580eb !important
+}
 .brand {
   padding: 5px;
   border-radius: 10px;
@@ -51,4 +54,41 @@
 }
 .ti-tag{
   background-color:#2580eb !important ;
+}
+.bannerimg{
+  overflow: hidden;
+}
+.welcome-bar{
+  align-items: center
+}
+.home-tags{
+  justify-content: center;
+}
+.home-icon{
+  margin-right: 5px
+}
+.about-des{
+  text-align: justify;
+}
+.about{
+  align-items: center;
+}
+footer{
+  padding-top: 3rem !important;
+  padding-bottom: 1rem !important;
+  background-color: #fff !important;
+}
+.level-icon{
+  font-size: 3rem;
+}
+.level-gh{
+  height: 100px;
+}
+.level-dev{
+  height: 100px;
+  border-radius: 10px;
+}
+.btn-dev{
+  background-image: linear-gradient(to bottom right, #f18e8e, #fce08a, #f3f095,#55c1ae, #88aedc,#f4b3ce,#f18e8e, #fce08a, #f3f095, #55c1ae,#88aedc, #f4b3ce);
+  color: #000000 !important
 }
