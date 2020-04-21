@@ -53,7 +53,7 @@
                     </div>
                   </div>
                   <div class="control">
-                    <button type="submit" class="button is-primary">Choose</button>
+                    <button type="submit" class="button is-primary">Search</button>
                   </div>
                 </div>
               </form>
@@ -111,13 +111,10 @@ export default {
   },
   methods: {
     search () {
-      console.log(this.listings)
-      console.log(this.searchData.keyword)
       listingsRef.orderByChild('location').equalTo(this.searchData.keyword).on('value',  (snapshot)=>{
         //console.log(snapshot.val())
         this.listings= snapshot.val()
       })
-      console.log(this.listings)
     }
   }
 }

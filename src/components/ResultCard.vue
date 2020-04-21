@@ -16,9 +16,9 @@
                 </div>
                 <p class="mt-1 item-des">{{ description }}</p>
                 <div class="tags">
-                    <span class="tag is-info">#{{ tags.t1 }}</span>
-                    <span class="tag is-warning">#{{ tags.t2 }}</span>
-                    <span class="tag is-danger">#{{ tags.t3 }}</span>
+                    <span class="tag is-info" v-if="tags.t1">#{{ tags.t1 }}</span>
+                    <span class="tag is-warning" v-if="tags.t2">#{{ tags.t2 }}</span>
+                    <span class="tag is-danger" v-if="tags.t3">#{{ tags.t3 }}</span>
                 </div>
             </div>
         </div>

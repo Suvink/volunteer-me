@@ -9,12 +9,39 @@
       </div>
       <div class="columns mt-2">
         <div class="column is-6">
-          <h1 class="title is-6 mb-0 text-primary">Contribute to the world!</h1>
+          <img src="../assets/logo-full.png" style="height: 100px">
+          <h1 class="title is-6 mb-0 text-primary mt-1">Contribute to the world!</h1>
           <h1 class="title is-4 mb-1 mt-0">VolunteerME project submissions</h1>
+
+          <div class="content conditions">
+            <h1 class="title is-5 mb-1 mt-2">What can you submit?</h1>
+            <p>
+              <ul>
+                <li>To submit an oppotunity, you have to be the organizer or a representative of the organization that is hosting the event.</li>
+                <li>You can submit almost any oppotunity as long as they don't involve in anything illegal.<br>(Eg: Submitting an oppotunity that is
+                    only applicable for a certain race)
+                </li>
+                <li>If the volunteering tasks involved with a certain risk, please be kind enought to mention them in the description.</li>
+              </ul>
+            </p>
+
+            <h1 class="title is-5 mb-1 mt-2">Types of submissions</h1>
+            <ul>
+              <li>Open-Source software projects</li>
+              <li>Animal welfare projects</li>
+              <li>Environmantal preservation projects</li>
+              <li>Social projects</li>
+              <li>Projects on helping differently abled</li>
+              <li>Community based entertainment projects</li>
+              <li>Etc *wink</li>
+            </ul>
+          </div>
+          <h1 class="title is-4 mb-1 mt-0">Happy <strong>Volunteering!</strong></h1>
+          <img src="../assets/people.gif">
         </div>
         <div class="column is-6 has-text-left">
-          <ValidationObserver v-slot="{ handleSubmit }">
-            <form @submit.prevent="handleSubmit(submitData)">
+          <ValidationObserver  v-slot="{ handleSubmit, reset }">
+            <form @submit.prevent="handleSubmit(submitData)" @reset.prevent="reset">
               <div class="field">
                 <label class="label">Event Name</label>
                 <div class="control">
@@ -233,7 +260,7 @@
                   <button class="button is-link" type="submit">Submit</button>
                 </div>
                 <div class="control">
-                  <button class="button is-link is-light">Cancel</button>
+                  <button class="button is-link is-light" type="reset">Cancel</button>
                 </div>
               </div>
             </form>
@@ -322,10 +349,21 @@ export default {
         this.formData.imgurl =
           'https://wizardly-visvesvaraya-500b32.netlify.app/favicon.png'
       }
-      
-      this.formData.ctags.t1 = this.tags[0].text
-      this.formData.ctags.t2 = this.tags[1].text
-      this.formData.ctags.t3 = this.tags[2].text
+      try{
+        this.formData.ctags.t1 = this.tags[0].text
+      }catch{
+        this.formData.ctags.t1 = ''
+      }
+      try{
+        this.formData.ctags.t2 = this.tags[1].text
+      }catch{
+        this.formData.ctags.t2 = ''
+      }
+      try{
+        this.formData.ctags.t3 = this.tags[2].text
+      }catch{
+        this.formData.ctags.t3 = ''
+      }
 
       //Push into Firebase
       listingsRef.push(this.formData, function (error) {
@@ -335,6 +373,7 @@ export default {
           console.log("Firebase Successful")
         }
       })
+
       //Send Whatsapp Message
       axios.post("https://us-central1-volunteer-me-9b8b3.cloudfunctions.net/sendWhatsapp", {
           to: "whatsapp:"+this.formData.contactno,
@@ -344,16 +383,14 @@ export default {
           this.notify = true
           this.notifySuccess = true
           this.formData = {name: '',location: '',shortdes: '',fulldes: '',orgname: '',startdate: '',selection: '',role: '',email: '',contactno: '',imgurl: '',ctags: {t1: '',t2: '',t3: ''}}
-          this.errors.clear();
-          requestAnimationFrame(() => {
-            this.$refs.observer.reset();
-            
-          });
+          window.scrollTo(0,0);
       }).catch(error =>{
           console.log(error)
           this.notify = true
           this.notifySuccess = false
       })
+      
+      
       
     },
     hideNotification: function (){

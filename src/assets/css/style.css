@@ -30,12 +30,6 @@ strong{
 .alignsenf {
   align-self: center;
 }
-@media only screen and (max-width: 770px) {
-  .opname,
-  .oploc {
-    text-align: center !important;
-  }
-}
 .text-primary{
   color: #2580eb !important;
 }
@@ -91,4 +85,21 @@ footer{
 .btn-dev{
   background-image: linear-gradient(to bottom right, #f18e8e, #fce08a, #f3f095,#55c1ae, #88aedc,#f4b3ce,#f18e8e, #fce08a, #f3f095, #55c1ae,#88aedc, #f4b3ce);
   color: #000000 !important
+}
+.conditions{
+  text-align: left;
+}
+@media only screen and (max-width: 769px) {
+  .column{
+    padding: 3rem !important
+  }
+  form{
+    padding: 3rem
+  }
+}
+@media only screen and (max-width: 770px) {
+  .opname,
+  .oploc {
+    text-align: center !important;
+  }
 }
