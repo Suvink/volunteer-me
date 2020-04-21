@@ -21,6 +21,7 @@ But finding a project to volunteer is not so easy. Mainly because different host
 I'm using VueJS as the frontend framework and Firebase as the backend (for now). The initial Stage is published and it just lists down the opportunities. It's still under constructions and I'm willing to add the following features soon.
 - A way to submit opportunities ✅
 - Notify a host when the project is submitted. (Using Twillio) ✅
+- A search function to search through oppotinities ✅
 - Notifications for the users when a new opportunity gets listed. ⚒️
 
 **[Update 2]**<br>
@@ -29,6 +30,13 @@ Firebase is integrated as the backend. I just love how the subscriptions work!
 
 **[Update 3]**<br>
 VolunteerME now sends whatsapp messages using Twilio's APIs when you submit an event to the system. But Sadly I haven't submitted my template to Whatsapp and got the approval. Untill then, this feature wont work. I used a Firebase Cloud funcion to send whatsapp message. Although it needed my project to be upgraded to Blaze plan, it was the easiest way to do this (for me!). You can find the source code for the cloud function <a href="https://github.com/Suvink/volunteerme-functions">here.</a> Now I have to work on the UI of the project. I'm really bad at content writing but gonna give this a try and see how it turns up. Cheers!
+
+**[Update 4]**<br>
+Finally VolunteerME is now fully functional! Added the search feature so the users can filter oppotunities by their preffered location.
+But there is a small bug in the form. It doesnt reset on submit. Still Couldnt any solution for that. Not even in Stack Overflow.
+If someone know a solution please comment below! TIA!. Writing content wasn't smooth because I not very good with that. Thought of asking someone for help but then I decided to do it on my own. <br>
+The approval process for Whatsapp template is kinda too long and I decided to add another email notfication as well. 
+
 
 ## Demo Link
  Demo Link: https://services.suvink.me/volunteer-me
