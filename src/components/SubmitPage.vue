@@ -127,7 +127,7 @@
               <div class="field">
                 <label class="label">Banner Image URL</label>
                 <div class="control">
-                  <ValidationProvider rules="required" v-slot="{ errors }">
+                  <ValidationProvider :rules="{ regex: /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ }" v-slot="{ errors }">
                     <input
                       class="input"
                       type="text"
@@ -280,7 +280,7 @@ import axios from 'axios'
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import { extend } from 'vee-validate'
 
-import { required, email, numeric, min } from 'vee-validate/dist/rules'
+import { required, email, numeric, min, regex } from 'vee-validate/dist/rules'
 extend('email', {
   ...email,
   message: 'Please enter a valid email address!'
@@ -296,6 +296,10 @@ extend('numeric', {
 extend('min',{
   ...min,
   message: "Minimun 250 characters required!"
+})
+extend('regex',{
+  ...regex,
+  message: "Please enter a valid type!"
 })
 
 export default {
