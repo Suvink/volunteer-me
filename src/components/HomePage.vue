@@ -11,13 +11,13 @@
               <h1 class="title is-1 mb-0">Welcome to Volunteer<strong>ME</strong></h1>
               <h1 class="title is-6 mt-1 mb-2">All the volunteering oppotunities in one place!</h1>
               <div class="tags home-tags">
-                <span class="tag is-primary is-medium mr-3"><i class="fas fa-hands-helping home-icon"></i>Volunteering</span>
-                <span class="tag is-warning is-medium mr-3"><i class="fas fa-hippo home-icon"></i>Animal Welfare</span>
-                <span class="tag is-black is-medium mr-3"><i class="fab fa-github home-icon"></i>Github</span>
+                <span class="tag is-primary is-medium mr-1 ml-1"><i class="fas fa-hands-helping home-icon"></i>Volunteering</span>
+                <span class="tag is-warning is-medium mr-1 ml-1"><i class="fas fa-hippo home-icon"></i>Animal Welfare</span>
+                <span class="tag is-black is-medium mr-1 ml-1"><i class="fab fa-github home-icon"></i>Github</span>
               </div>
               <div class="tags home-tags">
-                <span class="tag is-danger is-medium mr-3"><i class="fas fa-school home-icon"></i>Teaching</span>
-                <span class="tag is-success is-medium mr-3"><i class="fas fa-ambulance home-icon"></i>First Responders</span>
+                <span class="tag is-danger is-medium mr-1 ml-1"><i class="fas fa-school home-icon"></i>Teaching</span>
+                <span class="tag is-success is-medium mr-1 ml-1"><i class="fas fa-ambulance home-icon"></i>First Responders</span>
               </div>
             </div>
           </div>
@@ -27,10 +27,10 @@
           <h1 class="title is-4">Want to make the world a better place? Join hands with us!</h1>
           <div class="is-grouped">
             <router-link to="/search">
-              <button class="button is-link mr-3"><i class="fas fa-search home-icon"></i> Find an oppotunity</button>
+              <button class="button is-link ml-1 mr-1 find-btn"><i class="fas fa-search home-icon"></i> Find an oppotunity</button>
             </router-link>
             <router-link to="/add">
-              <button class="button is-warning" type="submit"><i class="fas fa-plus home-icon"></i> Submit an oppotunity</button>
+              <button class="button is-warning ml-1 mr-1" type="submit"><i class="fas fa-plus home-icon"></i> Submit an oppotunity</button>
             </router-link>
           </div>
         </section>
@@ -60,7 +60,7 @@
           <h1 class="title is-6 mt-0 mb-2">
             Got an idea to improve Volunteer<strong>ME</strong>? Go ahead and send us a Pull Request!
           </h1>
-          <nav class="level is-mobile mt-3">
+          <nav class="level mt-3">
             <div class="level-item has-text-centered">
               <div>
                 <img class="level-gh" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="height: 100px">

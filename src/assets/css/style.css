@@ -1,7 +1,10 @@
 @import url('https://unpkg.com/bulma@0.8.0/css/bulma.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 @import url('./helpers.css');
-
+body{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 strong{
   color: #2580eb !important
 }
@@ -93,9 +96,9 @@ footer{
   text-align: left;
 }
 @media only screen and (max-width: 769px) {
-  .column{
+  /* .column{
     padding: 3rem !important
-  }
+  } */
   form{
     padding: 3rem
   }
@@ -106,3 +109,14 @@ footer{
     text-align: center !important;
   }
 }
+@media only screen and (max-width: 514px) {
+  .find-btn{
+    margin-bottom: 1rem
+  }
+}
+@media only screen and (max-width: 768px) {
+  .level-item{
+    margin-bottom: 3rem !important
+  }
+}
+

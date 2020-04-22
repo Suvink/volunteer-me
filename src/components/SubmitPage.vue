@@ -380,7 +380,7 @@ export default {
 
       //Send Whatsapp Message
       axios.post("https://us-central1-volunteer-me-9b8b3.cloudfunctions.net/sendWhatsapp", {
-          to: "whatsapp:"+this.formData.contactno,
+          to: "+"+this.formData.contactno,
           message: "Your listing "+this.formData.name+" has been added successfully!\nThank you for using VolunteerME!"
       }).then(callback => {
           console.log("Successfully sent whatsapp message")
@@ -393,9 +393,6 @@ export default {
           this.notify = true
           this.notifySuccess = false
       })
-      
-      
-      
     },
     hideNotification: function (){
       this.notify = false
