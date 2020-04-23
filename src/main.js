@@ -9,6 +9,7 @@ import Footer from './components/Footer.vue'
 
 
 
+
 //Register Components
 Vue.component('NavBar', NavBar)
 Vue.component('Footer', Footer)

@@ -70,6 +70,7 @@
               :description="listing.shortdes"
               :imgurl="listing.imgurl"
               :tags="listing.ctags"
+              :fullData = "listing"
             />
           </div>
         </div>

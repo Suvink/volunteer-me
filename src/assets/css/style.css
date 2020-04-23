@@ -95,6 +95,22 @@ footer{
 .conditions{
   text-align: left;
 }
+.self-align-center{
+  align-self: center !important
+}
+.setails-fulldes{
+  text-align: justify
+}
+.titlebox{
+  background-color: #ffdd57;
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 769px) {
   /* .column{
     padding: 3rem !important
@@ -114,9 +130,15 @@ footer{
     margin-bottom: 1rem
   }
 }
-@media only screen and (max-width: 768px) {
-  .level-item{
-    margin-bottom: 3rem !important
+@media only screen and (max-width: 533px) {
+  .media-mobile{
+    display: block !important
+  }
+  .media-name{
+    font-size: 1rem !important;
+    margin-top: 1rem;
+  }
+  .media-by{
+    font-size: 0.8rem !important;
   }
 }
-
