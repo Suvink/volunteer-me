@@ -1,5 +1,5 @@
 <center>
-<img src="https://wizardly-visvesvaraya-500b32.netlify.com/img/logo-trans.767adaaa.png">
+<img src="https://volunteerme.netlify.app/img/logo-full.d473237c.png">
 </center>
 
 ## What I'm building
