@@ -122,6 +122,8 @@ export default {
         //console.log(snapshot.val())
         if(!snapshot.val()){
           this.searchFail = true
+        }else{
+          this.searchFail = false
         }
         this.listings= snapshot.val()
       })
