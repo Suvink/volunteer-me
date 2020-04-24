@@ -72,6 +72,11 @@
               :tags="listing.ctags"
               :fullData = "listing"
             />
+            <center v-if="searchFail">
+              <img class="searchfail-img" src="../assets/searchfail.gif">
+              <h1 class="title is-3 mb-0">Sorry! We couldn't find any oppotunity in {{ this.searchData.keyword}} :(</h1>
+              <h1 class="title is-6 mt-1 searchfail">Try a different area and see!</h1>
+            </center>
           </div>
         </div>
         <div class="column is-2"></div>
@@ -96,6 +101,7 @@ extend('required', {
 export default {
   data () {
     return {
+      searchFail: false,
       listings: [],
       searchData: {
         keyword: ""
@@ -114,6 +120,9 @@ export default {
     search () {
       listingsRef.orderByChild('location').equalTo(this.searchData.keyword).on('value',  (snapshot)=>{
         //console.log(snapshot.val())
+        if(!snapshot.val()){
+          this.searchFail = true
+        }
         this.listings= snapshot.val()
       })
     }

@@ -104,8 +104,12 @@ footer{
 .titlebox{
   background-color: #ffdd57;
 }
-
-
+.searchfail{
+  color: #2580eb !important;
+}
+.searchfail-img{
+  height: 300px
+}
 
 
 
