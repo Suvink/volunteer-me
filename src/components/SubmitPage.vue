@@ -146,6 +146,7 @@
                     <ValidationProvider rules="required" v-slot="{ errors }">
                       <select v-model="formData.location">
                         <option value="">Select a district</option>
+                        <option value="Country Wide">Country Wide</option>
                         <option value="Ampara">Ampara</option>
                         <option value="Anuradhapura">Anuradhapura</option>
                         <option value="Badulla">Badulla</option>
