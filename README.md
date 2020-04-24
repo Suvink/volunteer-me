@@ -37,6 +37,23 @@ But there is a small bug in the form. It doesnt reset on submit. Still Couldnt a
 If someone know a solution please comment below! TIA!. Writing content wasn't smooth because I not very good with that. Thought of asking someone for help but then I decided to do it on my own. <br>
 The approval process for Whatsapp template is kinda too long and I decided to add another email notfication as well. 
 
+**[Final Update]**<br>
+So now Im done with VolunteerME. Found some bugs and fixed them all. The search form reset thing I think probably a minor bug in the package itself. I filed an issue so lets see what will happen. Other than that everything looks fine. One major issue I found was I added a mobile only class to a level component and because of that mobile view was totally messed up. Fixed that and fixed some minor responsive issues. Added some gifs here and there so that you wouldnt get bored! Also another major feature I added was a seperate window to view the complete details of the oppotunities. So when you click on a search result, it will show complete details of the oppotunity. The page looks kinda boring compared to the others but I purposely kept it formal and minimal as possible.
+And Twilio Whatsapp didnt turn out to be great to me. I had to get permission for my template and the process requires some Facebook Page and stuff I dont have. So instead I bumped Whatsapp and moved into SMS. Thats it! If you find any issues please don't hesitate to contact me!
+
+## Conclusion
+I really enjoyed making VolunteerME despite all the mess I've made. It was quite challenging for me to learn VueJS and build everything from the scratch. YouTube helped a lot along the way! This stage, Im submittng for the Twilio Hackathon and I want to develop this into a commercial product. So I'll just listdown the features I have in mind. I'm gonna pair up with some devs (Can't do it all alone) and keep maintaining VolunteerME. If you are interested, let me know. Im gonna start again right after the Hackathon after a short break! 
+
+Features I want in the long run
+- Logins for hosts so they can list and edit their listings
+- Logins for users
+- Apply for oppotunuties through VolunteerME
+- Match making feature based on skills of the user
+- Online interview feature for hosts so they can interview people if needed. (using Twilio Programmable Video)
+- A Mobile App for VolunteerME
+- Making VolunteerME available worldwide
+
+If you have any cool suggestions feel free to contact me! 
 
 ## Demo Link
  Demo Link: https://services.suvink.me/volunteer-me
