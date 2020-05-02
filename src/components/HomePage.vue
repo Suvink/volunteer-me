@@ -4,11 +4,11 @@
 
         <section class="welcome">
           <div class="columns mt-2 welcome-bar">
-            <div class="column is-6">
+            <div class="column is-6 animated fadeIn">
               <img src="../assets/banner.jpg">
             </div>
             <div class="column is-6">
-              <h1 class="title is-1 mb-0">Welcome to Volunteer<strong>ME</strong></h1>
+              <h1 class="title is-1 mb-0 animated fadeInUp">Welcome to Volunteer<strong>ME</strong></h1>
               <h1 class="title is-6 mt-1 mb-2">All the volunteering oppotunities in one place!</h1>
               <div class="tags home-tags">
                 <span class="tag is-primary is-medium mr-1 ml-1"><i class="fas fa-hands-helping home-icon"></i>Volunteering</span>
@@ -93,8 +93,6 @@
             </div>
           </nav>
         </section>
-
-
     </div>
   </div>
 
