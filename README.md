@@ -36,7 +36,6 @@ Volunteer event hosts can submit their events into VolunteerME by the submission
 
 # Set up
 
-## Frontend
 
 ### Requirements
 
@@ -46,22 +45,25 @@ Volunteer event hosts can submit their events into VolunteerME by the submission
 
 ### Local development
 
-After the above requirements have been met:
+After the above requirements have been met: 
+<br><br>
 
-1. Clone this repository and `cd` into it
+<b>1. Clone this repository and `cd` into it</b>
 
 ```bash
 git clone git@github.com:Suvink/volunteer-me.git
 cd volunteer-me
 ```
+<br>
 
-2. Install dependencies
+<b>2. Install dependencies</b>
 
 ```bash
 npm install
 ```
+<br>
 
-3. Setup Firebase Project
+<b>3. Setup Firebase Project</b>
 
 Goto your <a href="">Firebase Console </a>and create a new project in Firebase Console. Then register a new web app.
 Copy the **config data** from the config file which will look like this.
@@ -74,30 +76,35 @@ storageBucket: "firebase-storage-bucket",
 messagingSenderId: "firebase-messaging-id",
 appId: "firebase-app-id"
 ```
+<br>
 
-4. Setup Firebase Configuration
+<b>4. Setup Firebase Configuration</b>
 
 Rename the `sample.env.txt` file into `.env` and add your previously copied Firebase configuration details there. (Replace the `######` marks with relevant details.)
 <br>
 **Note: Leave the `VUE_APP_BACKENDURL` as it is for now. It will be configured later.**
+<br>
+<br>
 
-5. Setup Firebase Realtime Database
+<b>5. Setup Firebase Realtime Database</b>
 
 Goto `Database` section in your Firebase Console and create a **Realtime Database**. Import `database.json` file in the `src` folder into Firebase Database. It will create dummy data for you to test.
+<br>
+<br>
 
-6. Setup the backend.
+<b>6. Setup the backend.</b>
+<br>
 You can find the source code and setup guide for the backend <a href="https://github.com/Suvink/volunteerme-functions">here</a>
+<br>
+<br>
 
-
-7. Run the project 
+<b>7. Run the project </b>
 
 ```bash
 npm run serve
 ```
+<br>
 
-
-
-**That's it!**
 
 
 ## Contributing
