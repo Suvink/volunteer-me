@@ -77,20 +77,24 @@ appId: "firebase-app-id"
 
 4. Setup Firebase Configuration
 
-Rename the `src/sample.env.txt` file into `.env` and add your previously copied Firebase configuration details there. (Replace the `######` marks with relevant details.)
+Rename the `sample.env.txt` file into `.env` and add your previously copied Firebase configuration details there. (Replace the `######` marks with relevant details.)
+<br>
+**Note: Leave the `VUE_APP_BACKENDURL` as it is for now. It will be configured later.**
 
 5. Setup Firebase Realtime Database
 
 Goto `Database` section in your Firebase Console and create a **Realtime Database**. Import `database.json` file in the `src` folder into Firebase Database. It will create dummy data for you to test.
 
-6. Run the project 
+6. Setup the backend.
+You can find the source code and setup guide for the backend <a href="https://github.com/Suvink/volunteerme-functions">here</a>
+
+
+7. Run the project 
 
 ```bash
 npm run serve
 ```
 
-7. Setup the backend.
-You can find the source code and setup guide for the backend <a href="https://github.com/Suvink/volunteerme-functions">here</a>
 
 
 **That's it!**

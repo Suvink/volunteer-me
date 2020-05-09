@@ -280,6 +280,7 @@ import axios from 'axios'
 /* eslint-disable no-unused-vars */
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import { extend } from 'vee-validate'
+require('dotenv').config();
 
 import { required, email, numeric, min, regex } from 'vee-validate/dist/rules'
 extend('email', {
@@ -380,7 +381,7 @@ export default {
       })
 
       //Send Whatsapp Message
-      axios.post("https://us-central1-volunteer-me-9b8b3.cloudfunctions.net/sendWhatsapp", {
+      axios.post(process.env.VUE_APP_BACKENDURL, {
           to: "+"+this.formData.contactno,
           message: "Your listing "+this.formData.name+" has been added successfully!\nThank you for using VolunteerME!"
       }).then(callback => {

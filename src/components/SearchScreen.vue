@@ -92,6 +92,7 @@ import { listingsRef } from '../firebase'
 /* eslint-disable no-unused-vars */
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import { extend } from 'vee-validate'
+require('dotenv').config();
 
 import { required } from 'vee-validate/dist/rules'
 extend('required', {
