@@ -8,7 +8,7 @@
 
 [![Vue version](https://img.shields.io/badge/Vue-v2-brightgreen)]()
 [![Vue version](https://img.shields.io/badge/Licence-MIT-orange)]()
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b7c67fbb-f660-4922-80bd-85cc4843d46a/deploy-status)](https://app.netlify.com/sites/volunteerme/deploys)
 
 ## About
 
