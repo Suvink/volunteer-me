@@ -51,7 +51,7 @@ After the above requirements have been met:
 <b>1. Clone this repository and `cd` into it</b>
 
 ```bash
-git clone git@github.com:Suvink/volunteer-me.git
+git clone https://github.com/Suvink/volunteer-me.git
 cd volunteer-me
 ```
 <br>
