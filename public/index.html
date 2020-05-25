@@ -10,8 +10,48 @@
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <pre>
+__        _______   _   _ _____ _____ ____    _   _ _____ _     ____  _ 
+\ \      / / ____| | \ | | ____| ____|  _ \  | | | | ____| |   |  _ \| |
+ \ \ /\ / /|  _|   |  \| |  _| |  _| | | | | | |_| |  _| | |   | |_) | |
+  \ V  V / | |___  | |\  | |___| |___| |_| | |  _  | |___| |___|  __/|_|
+   \_/\_/  |_____| |_| \_|_____|_____|____/  |_| |_|_____|_____|_|   (_)
+
+                    ## VolunteerME needs maintainers 
+                    ## Drop us an email if you're interested!     
+                    ## hello@volunteerme.lk                    
+      </pre>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- Mailchimp Popup -->
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"6186dc88f4adf745e9754bf3f","lid":"5838edcc3a","uniqueMethods":true}) })</script>
+    <!-- Navbar toggle -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+      });
+    </script>
   </body>
 </html>

@@ -75,7 +75,7 @@
               <div>
                 <img class="level-gh" src="https://image.flaticon.com/icons/svg/1108/1108905.svg" style="height: 100px">
                 <center>
-                  <a href="mailto:hello@suvink.me">
+                  <a href="mailto:hello@volunteerme.lk">
                     <button class="button is-info level-email mt-1"><i class="fas fa-envelope home-icon"></i> Email Us</button>
                   </a>
                 </center>
