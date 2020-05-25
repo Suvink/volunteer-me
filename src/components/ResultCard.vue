@@ -7,7 +7,7 @@
     }">
         <div class="result-block mb-1">
             <div class="columns">
-                <div class="column is-3 alignsenf">
+                <div class="column is-3 alignsenf imgcolumn">
                     <center>
                         <figure class="image is-128x128 bannerimg">
                         <img :src='imgurl'>
