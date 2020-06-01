@@ -22,9 +22,9 @@
                     </div>
                     <p class="mt-1 item-des">{{ description }}</p>
                     <div class="tags">
-                        <span class="tag is-info" v-if="tags.t1">#{{ tags.t1 }}</span>
-                        <span class="tag is-warning" v-if="tags.t2">#{{ tags.t2 }}</span>
-                        <span class="tag is-danger" v-if="tags.t3">#{{ tags.t3 }}</span>
+                        <span class="tag is-info" v-if="tags[0]">#{{ tags[0] }}</span>
+                        <span class="tag is-warning" v-if="tags[1]">#{{ tags[1] }}</span>
+                        <span class="tag is-danger" v-if="tags[2]">#{{ tags[2] }}</span>
                     </div>
                 </div>
             </div>

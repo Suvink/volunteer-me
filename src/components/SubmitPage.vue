@@ -256,6 +256,11 @@
                   </label>
                 </div>
               </div>
+              <div class="field" v-if="isSubmitting">
+                <center>
+                  <img src="../assets/loading.gif" style="height: 100px">
+                </center>
+              </div>
               <div class="field is-grouped mb-3">
                 <div class="control">
                   <button class="button is-link" type="submit">Submit</button>
@@ -275,7 +280,7 @@
 <script>
 import VueTagsInput from '@johmun/vue-tags-input';
 /* eslint-disable no-unused-vars */
-import { listingsRef } from '../firebase'
+import { firebaseApp,firebaseFirestore,firebase } from '../firebase'
 import axios from 'axios'
 /* eslint-disable no-unused-vars */
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
@@ -318,6 +323,7 @@ export default {
       terms: '',
       notify: false,
       notifySuccess: false,
+      isSubmitting: false,
       autocompleteItems: [{
         text: 'SriLanka',
       }, {
@@ -351,6 +357,8 @@ export default {
   },
   methods: {
     submitData: function () {
+      this.isSubmitting = true
+      let thisState = this
       if (!this.formData.imgurl) {
         this.formData.imgurl =
           'https://wizardly-visvesvaraya-500b32.netlify.app/favicon.png'
@@ -370,31 +378,45 @@ export default {
       }catch{
         this.formData.ctags.t3 = ''
       }
-
-      //Push into Firebase
-      listingsRef.push(this.formData, function (error) {
-        if (error) {
-          alert('Something went wrong!')
-        }else{
-          console.log("Firebase Successful")
-        }
+      
+      firebaseFirestore.collection('listings').add({
+        contactno: this.formData.contactno,
+        ctags: this.formData.ctags,
+        email: this.formData.email,
+        fulldes: this.formData.fulldes,
+        imgurl: this.formData.imgurl,
+        location: this.formData.location,
+        name: this.formData.name,
+        orgname: this.formData.orgname,
+        role: this.formData.role,
+        selection: this.formData.selection,
+        shortdes: this.formData.shortdes,
+        startdate: this.formData.startdate
+        //userid: this.formData.userid,
+      }).then(function(){
+        console.log("Data Added")
+      }).catch(err => {
+        alert('Something went wrong!')
       })
 
-      //Send Whatsapp Message
+      //Send SMS
       axios.post(process.env.VUE_APP_BACKENDURL, {
           to: "+"+this.formData.contactno,
           message: "Your listing "+this.formData.name+" has been added successfully!\nThank you for using VolunteerME!"
       }).then(callback => {
-          console.log("Successfully sent whatsapp message")
+          console.log("Successfully sent SMS message")
+          this.isSubmitting = false
           this.notify = true
           this.notifySuccess = true
           this.formData = {name: '',location: '',shortdes: '',fulldes: '',orgname: '',startdate: '',selection: '',role: '',email: '',contactno: '',imgurl: '',ctags: {t1: '',t2: '',t3: ''}}
           window.scrollTo(0,0);
       }).catch(error =>{
+          this.isSubmitting = false
           console.log(error)
           this.notify = true
           this.notifySuccess = false
       })
+
     },
     hideNotification: function (){
       this.notify = false
