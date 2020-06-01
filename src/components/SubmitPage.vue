@@ -347,11 +347,7 @@ export default {
         email: '',
         contactno: '',
         imgurl: '',
-        ctags: {
-          t1: '',
-          t2: '',
-          t3: ''
-        }
+        ctags: []
       }
     }
   },
@@ -364,19 +360,19 @@ export default {
           'https://wizardly-visvesvaraya-500b32.netlify.app/favicon.png'
       }
       try{
-        this.formData.ctags.t1 = this.tags[0].text
+        this.formData.ctags[0] = this.tags[0].text
       }catch{
-        this.formData.ctags.t1 = ''
+        this.formData.ctags[0] = ''
       }
       try{
-        this.formData.ctags.t2 = this.tags[1].text
+        this.formData.ctags[1] = this.tags[1].text
       }catch{
-        this.formData.ctags.t2 = ''
+        this.formData.ctags[1] = ''
       }
       try{
-        this.formData.ctags.t3 = this.tags[2].text
+        this.formData.ctags[2] = this.tags[2].text
       }catch{
-        this.formData.ctags.t3 = ''
+        this.formData.ctags[2] = ''
       }
       
       firebaseFirestore.collection('listings').add({
