@@ -2,6 +2,7 @@
   <div class="root">
     <div class="container has-text-centered">
       <h1 class="title is-1 mb-0">Submit an oppotunity</h1>
+      <p><b>Welcome {{currentUser}} </b></p>
       <div id="notification-class" class="notification mt-1 ml-2 mr-2" v-bind:class="{'is-success': notifySuccess, 'is-danger': !notifySuccess}" v-if="notify">
         <button class="delete" @click="hideNotification()"></button>
         <p v-if="notifySuccess">Your event submitted successfully!</p>
@@ -321,6 +322,8 @@ export default {
       tag: '',
       tags: [],
       terms: '',
+      currentUser: '',
+      currentUserUID: '',
       notify: false,
       notifySuccess: false,
       isSubmitting: false,
@@ -350,6 +353,14 @@ export default {
         ctags: []
       }
     }
+  },
+  mounted(){
+    firebase.auth().onAuthStateChanged(user => {
+      if(user){
+        this.currentUser = user.displayName
+        this.currentUserUID = user.uid
+      }
+    })
   },
   methods: {
     submitData: function () {
@@ -387,8 +398,8 @@ export default {
         role: this.formData.role,
         selection: this.formData.selection,
         shortdes: this.formData.shortdes,
-        startdate: this.formData.startdate
-        //userid: this.formData.userid,
+        startdate: this.formData.startdate,
+        userid: this.currentUserUID,
       }).then(function(){
         console.log("Data Added")
       }).catch(err => {

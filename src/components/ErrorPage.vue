@@ -1,15 +1,16 @@
 <template>
   <center>
     <section class="error_block" v-if="!$route.params.fullData">
-        <img src="https://www.shivamits.com/wp-content/uploads/2019/12/404-dribbble.gif">
+        <img src="../assets/404.gif">
     </section>
   </center>
 </template>
 
 <script>
 export default {
-    name: 'ErrorPage'
+    name: 'ErrorPage',
 }
+
 </script>
 
 <style>
