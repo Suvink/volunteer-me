@@ -88,7 +88,7 @@
 
 <script>
 /* eslint-disable */
-import { listingsRef } from '../firebase'
+import { firebaseApp,firebase } from '../firebase'
 /* eslint-disable no-unused-vars */
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import { extend } from 'vee-validate'
@@ -115,19 +115,35 @@ export default {
     ValidationProvider,
     ValidationObserver
   },
-  firebase: {
-    listings: listingsRef
+  created(){
+    let thisState = this;
+    firebaseApp.firestore().collection("listings").get()
+    .then(querySnapshot => {
+      querySnapshot.forEach(function (doc){
+        thisState.listings.push(doc.data())
+      })
+    })
+    .catch(err => {
+      console.log(err)
+    })
   },
   methods: {
     search () {
-      listingsRef.orderByChild('location').equalTo(this.searchData.keyword).on('value',  (snapshot)=>{
-        //console.log(snapshot.val())
-        if(!snapshot.val()){
-          this.searchFail = true
-        }else{
-          this.searchFail = false
+      let thisState = this;
+      this.listings = []
+      this.searchFail = false
+      firebaseApp.firestore().collection("listings").where("location", "==",this.searchData.keyword).get()
+      .then(querySnapshot => {
+        if(querySnapshot.empty){
+          thisState.searchFail = true
         }
-        this.listings= snapshot.val()
+        querySnapshot.forEach(function (doc){
+          thisState.listings.push(doc.data())
+        })
+      })
+      .catch(err => {
+        console.log(err)
+        this.searchFail = true
       })
     }
   }

@@ -63,9 +63,9 @@
 
             <h1 class="title is-4 mt-2">Tags</h1>
             <div class="tags">
-                    <span class="tag is-info">#{{ $route.params.fullData.ctags.t1 }}</span>
-                    <span class="tag is-warning">#{{ $route.params.fullData.ctags.t2 }}</span>
-                    <span class="tag is-danger">#{{ $route.params.fullData.ctags.t3 }}</span>
+                    <span class="tag is-info">#{{ $route.params.fullData.ctags[0] }}</span>
+                    <span class="tag is-warning">#{{ $route.params.fullData.ctags[1] }}</span>
+                    <span class="tag is-danger">#{{ $route.params.fullData.ctags[2] }}</span>
                 </div>
           </div>
         </section>

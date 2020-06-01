@@ -1,6 +1,9 @@
-import { initializeApp } from 'firebase'
+/* eslint-disable */ 
+import { initializeApp, firestore} from 'firebase'
+export const firebase = require('firebase')
+require('firebase/firestore')
 
-const app = initializeApp({
+export const firebaseApp = initializeApp({
     apiKey: process.env.VUE_APP_FIREBASEAPIKEY,
     authDomain: process.env.VUE_APP_FIREBASEAUTHDOMAIN,
     databaseURL: process.env.VUE_APP_FIREBASEDBURL,
@@ -11,5 +14,4 @@ const app = initializeApp({
     measurementId: process.env.VUE_APP_FIREBASEMESID
 })
 
-export const db = app.database()
-export const listingsRef = db.ref('listings')
+export const firebaseFirestore = firebaseApp.firestore()
