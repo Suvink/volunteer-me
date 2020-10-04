@@ -5,6 +5,7 @@ import SearchScreen from './components/SearchScreen.vue'
 import SubmitPage from './components/SubmitPage.vue'
 import DetailsPage from './components/DetailsPage.vue'
 import ErrorPage from './components/ErrorPage.vue'
+import Dashboard from './components/Dashboard.vue'
 import Login from './components/Login.vue'
 import { firebase } from './firebase'
 
@@ -41,6 +42,14 @@ let router = new Router({
       component: SubmitPage,
       meta: {
         requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard,
+      meta: {
+        requiresAuth: false
       }
     },
     {
