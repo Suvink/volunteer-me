@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import NavBar from './components/NavBar.vue'
 import ResultCard from './components/ResultCard.vue'
+import ListingCard from './components/ListingCard.vue'
 import router from './router'
 import './firebase'
 import { rtdbPlugin } from 'vuefire'
@@ -12,6 +13,7 @@ require('dotenv').config();
 Vue.component('NavBar', NavBar)
 Vue.component('Footer', Footer)
 Vue.component('ResultCard', ResultCard)
+Vue.component('ListingCard', ListingCard)
 
 Vue.use(rtdbPlugin)
 

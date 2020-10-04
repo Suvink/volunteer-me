@@ -117,6 +117,26 @@ footer{
 .login-image{
   width: 300px
 }
+.card{
+  border-radius: 15px;
+}
+.avatar{
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+.listings-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.listings-card{ 
+  width: 250px;
+}
+.profile-column{
+  justify-content: center;
+  padding: 0;
+}
 
 @media only screen and (max-width: 769px) {
   /* .column{
