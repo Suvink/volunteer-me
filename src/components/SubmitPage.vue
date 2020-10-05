@@ -355,10 +355,12 @@ export default {
     }
   },
   mounted(){
+    let thisState = this;
+
     firebase.auth().onAuthStateChanged(user => {
       if(user){
-        this.currentUser = user.displayName
-        this.currentUserUID = user.uid
+        thisState.currentUser = user.displayName
+        thisState.currentUserUID = user.uid
       }
     })
   },
