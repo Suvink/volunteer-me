@@ -130,7 +130,7 @@ footer{
   flex-wrap: wrap;
   justify-content: center;
 }
-.listings-card{ 
+.listings-card{
   width: 250px;
 }
 .profile-column{
@@ -144,6 +144,9 @@ footer{
   } */
   form{
     padding: 3rem
+  }
+  form#search{
+    padding: 1rem
   }
 }
 @media only screen and (max-width: 770px) {

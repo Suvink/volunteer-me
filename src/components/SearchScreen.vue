@@ -10,9 +10,12 @@
           <div class="search-block mt-2">
 
             <ValidationObserver v-slot="{ handleSubmit }">
-              <form @submit.prevent="handleSubmit(search)">
-                <div class="field has-addons">
-                  <p class="control">
+              <form id="search" @submit.prevent="handleSubmit(search)">
+                <div class="field" :class="{'has-addons': !isMobile}">
+                  <label v-if="isMobile" for="country" class="is-pulled-left">
+                    I want to Volunteer in
+                  </label>
+                  <p v-else class="control">
                     <a class="button is-static">
                       I want to Volunteer in
                     </a>
@@ -20,7 +23,7 @@
                   <div class="control is-expanded">
                     <div class="select is-fullwidth">
                       <ValidationProvider rules="required" v-slot="{ errors }">
-                        <select name="country" v-model="searchData.keyword">
+                        <select id="country" name="country" v-model="searchData.keyword">
                           <option value="">Select a district</option>
                           <option value="Ampara">Ampara</option>
                           <option value="Country Wide">Country Wide</option>
@@ -53,7 +56,7 @@
                     </ValidationProvider>
                     </div>
                   </div>
-                  <div class="control">
+                  <div class="control" :class="{'has-text-centered mt-2': isMobile}">
                     <button type="submit" class="button is-primary">Search</button>
                   </div>
                 </div>
@@ -126,6 +129,11 @@ export default {
     .catch(err => {
       console.log(err)
     })
+  },
+  computed: {
+    isMobile () {
+      return window.innerWidth < 768;
+    }
   },
   methods: {
     search () {
