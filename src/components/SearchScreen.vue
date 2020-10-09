@@ -154,7 +154,8 @@ export default {
         this.searchFail = true
       })
     }
-  }
+  },
+  
 }
 </script>
 

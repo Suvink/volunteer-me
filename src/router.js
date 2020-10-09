@@ -49,7 +49,7 @@ let router = new Router({
       name: 'Dashboard',
       component: Dashboard,
       meta: {
-        requiresAuth: false
+        requiresAuth: true
       }
     },
     {
@@ -79,7 +79,7 @@ router.beforeEach((to, from, next) => {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         next({
-          path: '/add',
+          path: '/dashboard',
           query: {
             redirect: to.fullPath
           }
