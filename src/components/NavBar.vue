@@ -27,9 +27,9 @@
                 <i class="fas fa-search home-icon"></i> Find
               </button>
             </router-link>
-            <router-link to="/add">
+            <router-link to="/dashboard">
               <button class="button is-warning mr-1" type="submit">
-                <i class="fas fa-plus home-icon"></i> Submit
+                <i class="fas fa-id-badge home-icon"></i> Dashboard
               </button>
             </router-link>
             <button class="button is-danger" type="submit" v-if="isLoggedIn" @click="logout">
