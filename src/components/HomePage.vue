@@ -39,7 +39,6 @@
       </section>
 
       <section class="about mt-4">
-        <h1 class="title is-4 mb-1">Vote for us at BestWeb.lk!</h1>
         <div class="columns about">
           <div class="column is-4">
             <a href="http://www.bestweb.lk/vote/site/www_volunteerme_lk">
@@ -55,6 +54,7 @@
             </a>
           </div>
           <div class="column is-8">
+            <h1 class="title is-4 mb-1 has-text-left">Vote for us at BestWeb.lk!</h1>
             <p class="about-des">
               BestWeb.lk is a web-based competition providing an
               exclusive opportunity to promote and popularise web presence in
